@@ -1,0 +1,44 @@
+# Victor Command Center — .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Environments
+.env
+.env.*
+venv/
+env/
+.venv/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+
+# Storage / DB
+storage/victor.db
+storage/vector_index/*.faiss
+storage/artifacts/*
+!storage/artifacts/.gitkeep
+!storage/vector_index/.gitkeep
+
+# Node
+node_modules/
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

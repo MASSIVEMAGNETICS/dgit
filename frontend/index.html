@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VICTOR COMMAND CENTER</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">VICTOR COMMAND CENTER</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <div class="header-status">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">CONNECTING…</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">REPOSITORIES</div>
+      <div class="sidebar-actions">
+        <button class="btn btn-small" id="btnRefresh">↺ REFRESH</button>
+        <button class="btn btn-small btn-accent" id="btnScan">⊕ SCAN</button>
+      </div>
+      <div id="repoList" class="repo-list">
+        <div class="loading-msg">Loading…</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <nav class="tabs">
+        <button class="tab active" data-tab="graph">◈ GRAPH</button>
+        <button class="tab" data-tab="repos">⊞ REPOS</button>
+        <button class="tab" data-tab="query">⌘ QUERY</button>
+      </nav>
+
+      <!-- GRAPH TAB -->
+      <div class="tab-panel active" id="tab-graph">
+        <div class="panel-header">RELATIONSHIP GRAPH</div>
+        <div id="graphContainer" class="graph-container">
+          <div class="loading-msg">Loading graph…</div>
+        </div>
+      </div>
+
+      <!-- REPOS TAB -->
+      <div class="tab-panel" id="tab-repos">
+        <div class="panel-header">ALL REPOSITORIES</div>
+        <div id="repoDetail" class="repo-detail-panel">
+          <div class="placeholder-msg">Select a repository from the sidebar.</div>
+        </div>
+      </div>
+
+      <!-- QUERY TAB -->
+      <div class="tab-panel" id="tab-query">
+        <div class="panel-header">QUERY INTERFACE</div>
+        <div id="queryResults" class="query-results">
+          <div class="placeholder-msg">Ask a question about your repositories.</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- QUERY PANEL (bottom bar) -->
+  <footer class="query-bar">
+    <span class="query-prompt">VICTOR ›</span>
+    <input
+      type="text"
+      id="queryInput"
+      class="query-input"
+      placeholder="Ask Victor anything… e.g. 'show all python repos' or 'map dependencies'"
+      autocomplete="off"
+    />
+    <button class="btn btn-accent" id="btnQuery">SEND</button>
+  </footer>
+
+  <!-- component scripts -->
+  <script src="/static/components/repo_list.js"></script>
+  <script src="/static/components/graph_view.js"></script>
+  <script src="/static/components/query_panel.js"></script>
+  <script src="/static/components/repo_detail.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
