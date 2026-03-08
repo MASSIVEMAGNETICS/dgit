@@ -1,0 +1,22 @@
+{
+  "base_dir": ".",
+  "storage_dir": "./storage",
+  "artifacts_dir": "./storage/artifacts",
+  "vector_index_dir": "./storage/vector_index",
+  "database_path": "./storage/victor.db",
+  "scan_paths": [],
+  "github_token": null,
+  "github_org": "MASSIVEMAGNETICS",
+  "embedding_model": "nomic-embed-text",
+  "embedding_dim": 768,
+  "chunk_size": 512,
+  "chunk_overlap": 50,
+  "llm_endpoint": "http://localhost:11434",
+  "llm_model": "llama3.1",
+  "host": "0.0.0.0",
+  "port": 8000,
+  "reload": true,
+  "victor_cognitive_enabled": true,
+  "attention_engine_enabled": true,
+  "qualia_tracking": true
+}
